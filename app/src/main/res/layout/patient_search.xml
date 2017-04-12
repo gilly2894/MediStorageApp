@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@android:color/holo_blue_light"
+    tools:context="com.fyp.shaun.medistorageapp.PatientSearch">
+
+    <EditText
+        android:id="@+id/et_patient_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter patient"
+        android:textSize="22sp" />
+
+   <Button
+        android:text="Search By Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_search_by_name"
+       android:onClick="searchByNameBtnClick" />
+
+    <TextView
+        android:text="or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textAllCaps="false"
+        android:textStyle="normal|bold|italic"
+        android:textAlignment="center" />
+
+    <Button
+        android:text="Search All Patients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_search_all"
+        android:onClick="searchAllPatientsBtnClick" />
+
+    <ProgressBar
+        android:id="@+id/pb_loading_indicator"
+        android:layout_height="42dp"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lv_search_patients" />
+</LinearLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MediStorageApp</string>
+    <string name="app_name">MediStorage</string>
     <string name="Log_in">MediStorage Login</string>
     <string name="Login_Button">Login</string>
     <string name="logout">Logout</string>

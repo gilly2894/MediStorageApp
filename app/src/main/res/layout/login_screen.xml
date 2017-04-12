@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="64dp"
+        android:paddingRight="64dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Log_in"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="9dp"
+            android:textSize="24sp"
+            android:id="@+id/MediStorage_Login_Title" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="UserName..."
+            android:ems="10"
+            android:layout_marginTop="37dp"
+            android:id="@+id/et_user_name_login_input"
+            android:layout_below="@id/MediStorage_Login_Title"
+            android:layout_centerHorizontal="true"
+            android:width="320dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password..."
+            android:ems="10"
+            android:layout_below="@id/et_user_name_login_input"
+            android:layout_alignLeft="@id/et_user_name_login_input"
+            android:layout_alignStart="@id/et_user_name_login_input"
+            android:layout_marginTop="26dp"
+            android:id="@+id/et_password_login_input"
+            android:width="320dp" />
+
+        <Button
+            android:text="@string/Login_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_password_login_input"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/theLoginBtn"
+            android:onClick="loginClicked" />
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2">
+
+        <ProgressBar
+            android:id="@+id/pb_cirle_login_screen"
+            android:layout_height="42dp"
+            android:layout_width="42dp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+</LinearLayout>

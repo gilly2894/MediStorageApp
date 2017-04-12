@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light">
+
+    <View
+        android:layout_width="match_parent"
+        android:paddingTop="1dp"
+        android:layout_height="3dp"
+        android:background="#FFFFFF"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+
+
+        <TextView
+            android:text="Patient Details"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/tv_patient_details"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="30dp" />
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/no_image"
+            android:id="@+id/imageView2"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#FFFFFF"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/my_switcher_name"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:text="Name: "
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tv_patient_details_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                android:textColor="@android:color/background_light"
+                android:paddingLeft="5dp"
+                android:gravity="center_vertical"
+                android:onClick="nameTV_Click" />
+
+            <EditText
+                android:id="@+id/hidden_et_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Name"
+                android:visibility="invisible"/>
+
+            <Button
+                android:text="Confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/confirm_name"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                android:onClick="nameConfirmClick"
+                android:visibility="invisible"/>
+
+
+        </RelativeLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFFFFF"/>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/my_switcher_ppsn"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="PPSN: "
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tv_patient_details_ppsn"
+                android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                android:textColor="@android:color/background_light"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:gravity="center_vertical"
+                android:onClick="ppsnTV_Click"/>
+
+            <EditText
+                android:id="@+id/hidden_et_ppsn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="PPSN"
+                android:visibility="invisible"/>
+
+            <Button
+                android:text="Confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/confirm_ppsn"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                android:onClick="ppsnConfirmClick"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFFFFF"/>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/my_switcher_condition"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Condition: "
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tv_patient_details_condition"
+                android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                android:textColor="@android:color/background_light"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:onClick="conditionTV_Click"
+                android:gravity="center_vertical" />
+
+            <EditText
+                android:id="@+id/hidden_et_condition"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Condition"
+                android:visibility="invisible"/>
+
+            <Button
+                android:text="Confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/confirm_condition"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                android:onClick="conditionConfirmClick"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#FFFFFF"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".8">
+
+        <TextView
+            android:text="Patients Address:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_address_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@android:color/background_light"
+            android:textStyle="normal|bold|italic"
+            android:paddingLeft="5dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#FFFFFF"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/my_switcher_address_line1"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:text="Address Line 1: "
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_details_address_line1"
+                    android:textColor="@android:color/background_light"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:onClick="addressline1TV_Click"
+                    android:gravity="center_vertical" />
+
+                <EditText
+                    android:id="@+id/hidden_et_address_line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Line 1"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:text="Confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/confirm_address_line1"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"
+                    android:onClick="addressLine1ConfirmClick"
+                    android:visibility="invisible"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FFFFFF"/>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/my_switcher_address_line2"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_details_address_line2"
+                    android:textColor="@android:color/background_light"
+                    android:text="Address Line 2: "
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:onClick="addressline2TV_Click"
+                    android:gravity="center_vertical" />
+
+                <EditText
+                    android:id="@+id/hidden_et_address_line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Line 2"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:text="Confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/confirm_address_line2"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"
+                    android:onClick="addressLine2ConfirmClick"
+                    android:visibility="invisible"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FFFFFF"/>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/my_switcher_city"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:text="City: "
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_patient_details_city"
+                    android:textColor="@android:color/background_light"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:onClick="cityTV_Click"
+                    android:gravity="center_vertical" />
+
+                <EditText
+                    android:id="@+id/hidden_et_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="City"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:text="Confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/confirm_city"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"
+                    android:onClick="cityConfirmClick"
+                    android:visibility="invisible"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FFFFFF"/>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/my_switcher_county"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:text="County: "
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_patient_details_county"
+                    android:textColor="@android:color/background_light"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:onClick="countyTV_Click"
+                    android:gravity="center_vertical" />
+
+                <EditText
+                    android:id="@+id/hidden_et_county"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="County"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:text="Confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/confirm_county"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"
+                    android:onClick="countyConfirmClick"
+                    android:visibility="invisible"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FFFFFF"/>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/my_switcher_country"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:text="Country: "
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_patient_details_country"
+                    android:textColor="@android:color/background_light"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:onClick="countryTV_Click"
+                    android:gravity="center_vertical" />
+
+                <EditText
+                    android:id="@+id/hidden_et_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Country"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:text="Confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/confirm_country"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"
+                    android:onClick="countryConfirmClick"
+                    android:visibility="invisible"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FFFFFF"/>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/my_switcher_postcode"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:text="Postcode: "
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tv_patient_details_postcode"
+                    android:textColor="@android:color/background_light"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:onClick="postcodeTV_Click"
+                    android:gravity="center_vertical" />
+
+                <EditText
+                    android:id="@+id/hidden_et_postcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Postcode"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:text="Confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/confirm_postcode"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"
+                    android:onClick="postcodeConfirmClick"
+                    android:visibility="invisible"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
