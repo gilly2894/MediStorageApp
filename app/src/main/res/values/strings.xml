@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">MediStorageApp</string>
+    <string name="Log_in">MediStorage Login</string>
+    <string name="Login_Button">Login</string>
+    <string name="logout">Logout</string>
+    <string name="search">Search</string>
+    <string name="error_message">This is an error message!</string>
+    <string name="addressTitle">Address:</string>
+    <string name="post">Post</string>
+    <string name="DeletePatient">Delete</string>
+    <string name="AddNewPatient">Add New Patient</string>
+    <string name="UpdatePatient">Update</string>
 </resources>

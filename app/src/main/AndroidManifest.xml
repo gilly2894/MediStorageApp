@@ -2,19 +2,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fyp.shaun.medistorageapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Splash">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LoginScreen"></activity>
+        <activity android:name=".HomeScreen"></activity>
+        <activity android:name=".PatientSearch"></activity>
+        <activity android:name=".PatientDetailsPage"></activity>
+        <activity android:name=".AddPatient"></activity>
     </application>
 
 </manifest>
